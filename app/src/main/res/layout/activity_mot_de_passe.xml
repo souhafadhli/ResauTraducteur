@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home"
+    tools:context=".MotDePasse">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="50dp"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/roundbuttonblanc"
+        android:layout_marginStart="50dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/nom"
+            android:drawableEnd="@drawable/ic_user"
+            android:background="@drawable/roundbuttonblanc"
+            android:hint="@string/nom"
+            android:layout_marginStart="30dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="-300dp"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/roundbuttonblanc"
+        android:layout_marginStart="-300dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/email"
+            android:drawableEnd="@drawable/ic_mail2"
+            android:background="@drawable/roundbuttonblanc"
+            android:hint="@string/email"
+            android:layout_marginStart="30dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="-330dp"
+        android:layout_marginTop="400dp"
+        android:id="@+id/bt"
+        android:text="@string/envoyer_mon_motdepasse"
+        android:background="@drawable/roundbuttonbluefort"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="-330dp" />
+</LinearLayout>

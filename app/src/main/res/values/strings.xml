@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ReseauTraducteur</string>
+    <string name="se_connecter">se_connecter</string>
+    <string name="cr_er_un_compte">cr_er_un_compte</string>
+    <string name="mot_de_passe_oubli">mot_de_passe_oubli</string>
+    <string name="mot_de_passe">mot_de_passe</string>
+    <string name="nom_de_utilisateur">nom_de_utilisateur</string>
+    <string name="crer">crer</string>
+    <string name="prenom_de_utilisateur">prenom_de_utilisateur</string>
+    <string name="adresse_email">adresse_email</string>
+    <string name="adresse">adresse</string>
+    <string name="telephone">telephone</string>
+    <string name="cin">cin</string>
+    <string name="date_de_naissance">date_de_Naissance</string>
+    <string name="traducteur">traducteur</string>
+    <string name="client">client</string>
+    <string name="role">Role</string>
+    <string name="vous_avez_deja_un_compte">vous_avez_deja_un_compte</string>
+    <string name="nom">nom</string>
+    <string name="email">email</string>
+    <string name="envoyer_mon_motdepasse">envoyer_mon_motdepasse</string>
+
+</resources>

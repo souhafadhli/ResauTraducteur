@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:paddingLeft="12dp"
+    android:paddingBottom="12dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_name"
+        android:text="Name"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/black">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_lastname"
+        android:text="lastname"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/black">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="18sp"
+            android:id="@+id/item_email"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_id"
+            android:visibility="invisible"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="voir CV"
+            android:gravity="center"
+            android:id="@+id/bt_cv"
+            android:background="@drawable/roundbuttonblanc"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginStart="60dp"/>
+
+    </LinearLayout>
+   </LinearLayout>

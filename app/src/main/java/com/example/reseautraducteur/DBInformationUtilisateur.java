@@ -62,10 +62,10 @@ public class DBInformationUtilisateur extends SQLiteOpenHelper {
         contentValues.put(colomn3,Nom);
         contentValues.put(colomn4,MotDePasse);
         contentValues.put(colomn5,Adresse);
-        contentValues.put(colomn5,mail);
-        contentValues.put(colomn5,Telephone);
-        contentValues.put(colomn5,Datanaissanse);
-        contentValues.put(colomn5,Role);
+        contentValues.put(colomn6,mail);
+        contentValues.put(colomn7,Telephone);
+        contentValues.put(colomn8,Datanaissanse);
+        contentValues.put(colomn9,Role);
         long l=db.insert(TableName,null,contentValues);
         return l != -1;
     }
@@ -122,7 +122,7 @@ public class DBInformationUtilisateur extends SQLiteOpenHelper {
         return db.rawQuery("Select Telephone from "+TableName+" where Nom=?",new String[]{nom});
     }
     //getRole
-    public Cursor getRole(String nom)
+    public Cursor getRole1(String nom)
     {
         SQLiteDatabase db=this.getWritableDatabase();
         return db.rawQuery("Select Role from "+TableName+" where Nom=?",new String[]{nom});
@@ -141,10 +141,14 @@ public class DBInformationUtilisateur extends SQLiteOpenHelper {
         return db.rawQuery("Select Datanaissanse from "+TableName+" where Nom=?",new String[]{nom});
     }
 
+    public static String getColomn9() {
+        return colomn9;
+    }
+
     //la liste des Traducteur
     public void populateUtilisateurListArray() {
         SQLiteDatabase db=this.getReadableDatabase();
-      try (Cursor result= db.rawQuery("Select Nom from "+TableName+" Where"+" Role='traducteur'",null)){
+      try (Cursor result= db.rawQuery("Select * from "+TableName+" Where Role= 'traducteur'",null)){
           if (result.getCount()!=0){
               while (result.moveToNext())
               {

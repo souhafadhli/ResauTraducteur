@@ -3,6 +3,7 @@ package com.example.reseautraducteur;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,7 +18,6 @@ public class login extends AppCompatActivity {
     Button se_connecter;
     TextInputEditText mail,password;
     DBInformationUtilisateur dbInformationUtilisateur;
-    TextView forgotpassword;
     //**********************************************************************************************
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,6 @@ public class login extends AppCompatActivity {
         creataccount=findViewById(R.id.creataccount);
         mail=findViewById(R.id.mail);
         password=findViewById(R.id.password);
-        forgotpassword=findViewById(R.id.forgot);
         dbInformationUtilisateur=new DBInformationUtilisateur(this);
         //******************************************************************************************
 
@@ -65,13 +64,21 @@ public class login extends AppCompatActivity {
             else
             {
                 boolean checkuserpass=dbInformationUtilisateur.checkmailpassword(mail.getText().toString(),password.getText().toString());
+                String role=dbInformationUtilisateur.getColomn9();
                 //test pour vérifier si l'utilisateur existe ou non
                 if(checkuserpass)
-                {
+                { if(role =="traducteur"){
                     Toast.makeText(getApplicationContext(),"connexion réussie",Toast.LENGTH_LONG).show();
                     Intent intent=new Intent(getApplicationContext(),ListeDeTraducteur.class);
                     intent.putExtra("mail",mail.getText().toString());
                     startActivity(intent);
+                }else
+                {
+                    Toast.makeText(getApplicationContext(),"connexion réussie",Toast.LENGTH_LONG).show();
+                    Intent intent=new Intent(getApplicationContext(),admin.class);
+                    intent.putExtra("mail",mail.getText().toString());
+                    startActivity(intent);
+                }
                 }
                 else
                 {
@@ -79,14 +86,5 @@ public class login extends AppCompatActivity {
                 }
             }
         });
-        //******************************************************************************************
-
-        //mot de passe oublier
-        //******************************************************************************************
-        forgotpassword.setOnClickListener(v -> {
-            Intent intent=new Intent(getApplicationContext(),MotDePasse.class);
-            startActivity(intent);
-        });
-        //******************************************************************************************
-    }
+     }
 }

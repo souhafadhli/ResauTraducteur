@@ -82,14 +82,7 @@
                 android:layout_marginStart="10dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/forgot"
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/mot_de_passe_oubli"
-            android:textColor="#4169E1"
-            android:textSize="20sp" />
+
 
         <Button
             android:id="@+id/button_sign_in"

@@ -2,7 +2,6 @@
     <string name="app_name">ReseauTraducteur</string>
     <string name="se_connecter">se_connecter</string>
     <string name="cr_er_un_compte">cr_er_un_compte</string>
-    <string name="mot_de_passe_oubli">mot_de_passe_oubli</string>
     <string name="mot_de_passe">mot_de_passe</string>
     <string name="nom_de_utilisateur">nom_de_utilisateur</string>
     <string name="crer">crer</string>
@@ -18,6 +17,5 @@
     <string name="vous_avez_deja_un_compte">vous_avez_deja_un_compte</string>
     <string name="nom">nom</string>
     <string name="email">email</string>
-    <string name="envoyer_mon_motdepasse">envoyer_mon_motdepasse</string>
 
 </resources>
